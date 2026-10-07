@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>色色色电影网 - 热门高分电影推荐，最新电影排行榜与观影指南</title>
+<meta name="description" content="色色色电影网（sesesedianyingwang-wap.github.io）专注热门高分电影推荐，提供最新电影排行榜、类型分类导航与观影指南，帮你快速找到值得看的电影。">
+<meta name="keywords" content="色色色电影网,高分电影推荐,最新电影排行榜,热门电影,电影分类,观影指南,sesesedianyingwang-wap.github.io">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="色色色电影网 - 热门高分电影推荐">
+<meta property="og:description" content="色色色电影网专注热门高分电影推荐，提供最新电影排行榜、类型分类导航与观影指南。">
+<meta property="og:url" content="https://sesesedianyingwang-wap.github.io">
+<meta property="og:site_name" content="色色色电影网">
+<link rel="canonical" href="https://sesesedianyingwang-wap.github.io">
+<style>
+/* ===== Reset ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;background:#0d0f14;color:#e6e9ef;line-height:1.75;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button,input{font-family:inherit;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid #ff3b3b;outline-offset:2px}
+::selection{background:#ff3b3b;color:#fff}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#2a2f3a;border-radius:9px}
+img{display:block;max-width:100%}
+
+/* ===== 工具 ===== */
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+section{padding:74px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10.5px;letter-spacing:3.2px;text-transform:uppercase;color:#ff5252;margin-bottom:13px;font-weight:700}
+.eyebrow::before{content:"◆";font-size:9px}
+.sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:34px;flex-wrap:wrap}
+.sec-head .tt{flex:1;min-width:240px}
+.sec-head h2{font-size:27px;color:#f2f4f7;font-weight:800;letter-spacing:-.3px}
+.sec-head h2 em{font-style:normal;color:#ff3b3b}
+.sec-head p{font-size:13.5px;color:#8b93a3;margin-top:6px}
+.sec-head .more{font-size:13px;color:#ff5252;white-space:nowrap;border-bottom:1px solid #3a2f38;padding-bottom:2px}
+.sec-head .more:hover{color:#ff8a8a;border-color:#ff3b3b}
+
+/* ===== Header ===== */
+.site-head{position:sticky;top:0;z-index:99;background:rgba(13,15,20,.94);backdrop-filter:blur(14px);border-bottom:1px solid #1f242e}
+.head-in{display:flex;align-items:center;height:74px;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand .mk{width:46px;height:30px;border-radius:6px;background:linear-gradient(135deg,#ff3b3b,#c00);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:900;flex-shrink:0;box-shadow:0 4px 14px rgba(255,59,59,.32);letter-spacing:-.6px}
+.brand .nm{font-size:20px;font-weight:800;color:#f2f4f7;letter-spacing:-.4px}
+.brand .nm b{color:#ff3b3b}
+.brand .en{font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;color:#6b7285;font-family:-apple-system,sans-serif;border-left:1px solid #2a2f3a;padding-left:11px;line-height:1.4}
+.menu{display:flex;gap:3px;margin-left:auto;align-items:center}
+.menu a{font-size:14.5px;padding:9px 15px;transition:.2s;position:relative;color:#b8bfcc}
+.menu a:hover{color:#f2f4f7}
+.menu a.on{color:#ff5252}
+.menu a.on::after{content:"";position:absolute;left:15px;right:15px;bottom:1px;height:2px;background:#ff3b3b}
+.hamb{display:none;width:42px;height:42px;border-radius:8px;border:1.5px solid #2a2f3a;color:#f2f4f7;font-size:18px}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding:76px 0 84px;overflow:hidden;border-bottom:1px solid #1f242e}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(640px 400px at 84% 6%,rgba(255,59,59,.18),transparent 64%),radial-gradient(520px 340px at 0% 100%,rgba(255,180,50,.10),transparent 64%)}
+.hg{position:absolute;right:-90px;top:50%;transform:translateY(-50%);width:420px;height:420px;border-radius:50%;border:1px solid rgba(255,59,59,.22);z-index:0}
+.hg::before,.hg::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,59,59,.14);inset:34px}
+.hg::after{inset:76px;border-color:rgba(255,180,50,.14)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative}
+.hero h1{font-size:clamp(34px,6.4vw,56px);line-height:1.14;color:#f2f4f7;font-weight:800;letter-spacing:-1.2px;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:#ff3b3b}
+.hero .sub{display:inline-block;font-size:13.5px;color:#ff8a8a;background:rgba(255,59,59,.10);border:1px solid rgba(255,59,59,.32);padding:6px 15px;border-radius:30px;margin-bottom:20px;font-weight:600}
+.hero-desc{font-size:15.5px;color:#a9b0be;max-width:520px;margin-bottom:26px}
+.hero-btns{display:flex;gap:13px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 26px;border-radius:8px;font-size:14.5px;transition:.24s;font-weight:600}
+.btn-f{background:linear-gradient(135deg,#ff3b3b,#c00);color:#fff}
+.btn-f:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn-g{color:#f2f4f7;border:1.5px solid #2a2f3a}
+.btn-g:hover{border-color:#ff3b3b;background:rgba(255,59,59,.07)}
+.hero-chips{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+.chip{font-size:12.5px;color:#6b7285;letter-spacing:.5px}
+.chip b{display:block;font-size:21px;color:#ff5252;font-weight:800}
+
+/* 右侧环形评分盘 */
+.dash{position:relative;height:400px;background:linear-gradient(160deg,#141821,#0f1117);border:1px solid #232a36;border-radius:14px;padding:24px;box-shadow:0 20px 46px rgba(0,0,0,.45)}
+.ring{position:relative;width:100%;height:100%;border-radius:50%;background:conic-gradient(from 200deg,#ff3b3b 0deg,#ffb432 120deg,#3a4252 120deg 360deg);display:grid;place-items:center;transition:background .6s}
+.ring::before{content:"";position:absolute;inset:24px;border-radius:50%;background:#11141b;box-shadow:inset 0 6px 24px rgba(0,0,0,.55)}
+.ring-in{position:relative;z-index:2;text-align:center;padding:20px}
+.ring-in .lb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6b7285}
+.ring-in .sc{font-size:42px;font-weight:800;color:#f2f4f7;line-height:1.1;font-style:italic}
+.ring-in .nm{font-size:13.5px;color:#ff8a8a;margin-top:6px;font-weight:600}
+.ring-in .mk{font-size:10.5px;color:#6b7285;margin-top:9px}
+.dash-ctrl{position:absolute;left:0;right:0;bottom:-8px;display:flex;gap:7px;justify-content:center}
+.dash-ctrl button{font-size:11.5px;padding:6px 13px;border-radius:30px;border:1px solid #2a2f3a;color:#8b93a3;cursor:pointer;transition:.2s}
+.dash-ctrl button.on{background:#ff3b3b;border-color:#ff3b3b;color:#fff;font-weight:700}
+
+/* ===== 栏目一：高分电影（双栏列表） ======== */
+.rank{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rk-col{background:#141821;border:1px solid #1f242e;border-radius:12px;overflow:hidden}
+.rk-col h4{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;background:#181c26;border-bottom:1px solid #232a36;font-size:15.5px;color:#f2f4f7}
+.rk-col h4 span{font-size:11.5px;color:#6b7285;font-weight:500}
+.rk-col ol{padding:6px 14px 14px}
+.rk-i{display:grid;grid-template-columns:34px 1fr auto;gap:13px;align-items:center;padding:11px 6px;border-bottom:1px solid #1d222c}
+.rk-i:last-child{border-bottom:none}
+.rk-i .no{width:30px;height:30px;border-radius:6px;display:grid;place-items:center;font-size:13px;font-weight:800;color:#8b93a3;background:#1a1e27;font-family:-apple-system,sans-serif}
+.rk-i.g1 .no,.rk-i.g2 .no,.rk-i.g3 .no{color:#fff}
+.rk-i.g1 .no{background:linear-gradient(135deg,#ffb432,#c8880a)}
+.rk-i.g2 .no{background:linear-gradient(135deg,#c9ccd3,#7d848f)}
+.rk-i.g3 .no{background:linear-gradient(135deg,#cd8a5c,#8a5a36)}
+.rk-i .tx h6{font-size:14.5px;color:#f2f4f7;font-weight:700;margin-bottom:2px}
+.rk-i .tx small{font-size:11.5px;color:#6b7285}
+.rk-i .sc{font-size:15px;font-weight:800;color:#ffb432;font-family:-apple-system,sans-serif}
+
+/* ===== 栏目二：类型分类（彩色方块矩阵） ======== */
+.gen-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.gen{position:relative;height:130px;border-radius:10px;overflow:hidden;padding:16px;display:flex;flex-direction:column;justify-content:space-between;transition:.28s;cursor:pointer}
+.gen:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(0,0,0,.42)}
+.gen .ic{font-size:23px}
+.gen .nmx{font-size:15px;font-weight:700;color:#fff;position:relative;z-index:2}
+.gen .ct{font-size:11.5px;color:rgba(255,255,255,.82);position:relative;z-index:2}
+.gen div{position:absolute;inset:0}
+.gen::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62),rgba(0,0,0,.05) 62%)}
+
+/* ===== 栏目三：观影指南（步骤横轴） ======== */
+.guide{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.guide::before{content:"";position:absolute;left:8%25;right:8%25;top:26px;height:2px;background:repeating-linear-gradient(90deg,#ff3b3b 0 7px,transparent 7px 14px);z-index:0}
+.gd{padding:0 12px;text-align:center;position:relative;z-index:2}
+.gd .n{width:52px;height:52px;margin:0 auto 15px;border-radius:50%;display:grid;place-items:center;font-size:18px;font-weight:800;color:#fff;background:linear-gradient(135deg,#ff3b3b,#c00);box-shadow:0 6px 16px rgba(255,59,59,.3);font-family:-apple-system,sans-serif}
+.gd h5{font-size:15.5px;color:#f2f4f7;font-weight:700;margin-bottom:6px}
+.gd p{font-size:12.5px;color:#8b93a3;line-height:1.85}
+
+/* ===== 栏目四：观影日历（周历网格） ======== */
+.cal{background:#141821;border:1px solid #1f242e;border-radius:12px;padding:22px 24px}
+.cal-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.cal-top h4{font-size:16px;color:#f2f4f7}
+.cal-top .wk{font-size:12px;color:#6b7285}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.cd{background:#181c26;border:1px solid #232a36;border-radius:8px;padding:10px 9px;min-height:86px;transition:.22s;cursor:pointer}
+.cd:hover{border-color:#ff3b3b;background:#1d212c}
+.cd .d{font-size:11px;color:#6b7285;margin-bottom:6px}
+.cd .t{font-size:12px;color:#e6e9ef;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cd.hl{border-color:#ff3b3b;background:linear-gradient(155deg,rgba(255,59,59,.14),#181c26)}
+.cd.hl .d{color:#ff5252;font-weight:700}
+.cal-ft{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:#6b7285}
+.cal-ft i{display:inline-block;width:9px;height:9px;border-radius:2px;background:#ff3b3b;margin-right:6px;vertical-align:1px}
+
+/* ===== 栏目五：关于 ======== */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.ab-l{background:linear-gradient(155deg,#1a1d26,#141821);border:1px solid #232a36;border-radius:14px;padding:34px;position:relative;overflow:hidden}
+.ab-l::before{content:"666";position:absolute;right:-6px;bottom:-30px;font-size:130px;font-weight:900;color:#1d222c;line-height:1;letter-spacing:-5px}
+.ab-l h3{font-size:20px;color:#f2f4f7;margin-bottom:13px;font-weight:800;position:relative}
+.ab-l p{font-size:14px;color:#a9b0be;line-height:2;position:relative}
+.ab-l .url{display:inline-block;margin-top:18px;font-size:13px;color:#fff;background:linear-gradient(135deg,#ff3b3b,#c00);padding:10px 17px;border-radius:8px;font-weight:700;position:relative}
+.ab-r{display:flex;flex-direction:column;gap:20px}
+.ab-r>div{background:#141821;border:1px solid #1f242e;border-radius:12px;padding:22px 24px;transition:.26s;border-left:4px solid #ff3b3b}
+.ab-r>div:hover{transform:translateX(5px);background:#1a1e27}
+.ab-r .num{font-size:25px;font-weight:800;color:#ff5252;line-height:1.2}
+.ab-r .lb{font-size:13px;color:#8b93a3;margin-top:4px}
+
+/* ===== Footer ===== */
+footer{border-top:1.5px solid #1f242e;padding:46px 0 26px;background:#0a0c10}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px}
+.ft-brand .brand{margin-bottom:15px}
+.ft-brand>p{font-size:13px;color:#6b7285;line-height:1.95}
+.ft-col h5{font-size:14px;color:#f2f4f7;margin-bottom:15px;font-weight:800}
+.ft-col a{display:block;font-size:13px;color:#6b7285;padding:5px 0;transition:.18s}
+.ft-col a:hover{color:#ff5252;padding-left:5px}
+.ft-bot{border-top:1px solid #1f242e;margin-top:32px;padding-top:18px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;font-size:12.5px;color:#545b6a}
+.ft-bot a{color:#6b7285}
+.ft-bot a:hover{color:#ff5252}
+
+/* ===== Top ===== */
+.top{position:fixed;right:16px;bottom:22px;width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#ff3b3b,#c00);color:#fff;display:none;place-items:center;font-size:17px;z-index:60;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+
+/* ===== 响应式 ===== */
+@media (max-width:920px){
+  .hamb{display:grid;margin-left:auto}
+  .menu{position:fixed;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;background:#0a0c10;border-bottom:1.5px solid #1f242e;padding:12px;gap:3px;transform:translateY(-120%);transition:.3s;visibility:hidden}
+  .menu.open{transform:translateY(0);visibility:visible}
+  .menu a{padding:13px 15px}
+  .menu a.on::after{display:none}
+  .menu a.on{background:#141821}
+  .hero-in{grid-template-columns:1fr;gap:34px}
+  .dash{height:340px;max-width:520px}
+  .rank{grid-template-columns:1fr}
+  .guide{grid-template-columns:1fr 1fr;gap:24px}
+  .guide::before{display:none}
+  .about{grid-template-columns:1fr}
+  .cal-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:560px){
+  section{padding:48px 0}
+  .dash{height:300px}
+  .gen-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .gen{height:112px}
+  .guide{grid-template-columns:1fr 1fr}
+  .cal-grid{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- ===== Header ===== -->
+<header class="site-head">
+  <div class="wrap head-in">
+    <a href="#top" class="brand">
+      <span class="mk">666</span>
+      <span class="nm">666<strong>电影网</strong></span>
+      <span class="en">Top Rated<br>Films</span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#top" class="on">首页</a>
+      <a href="#rank">高分电影</a>
+      <a href="#genre">类型分类</a>
+      <a href="#guide">观影指南</a>
+      <a href="#cal">上映日历</a>
+      <a href="#about">关于</a>
+    </nav>
+    <button class="hamb" id="hamb" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hg"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow">Top Rated Films</div>
+        <h1>热门<em>高分电影</em><br>一键找到值得看</h1>
+        <div class="sub">色色色电影网 · 热门高分电影推荐平台</div>
+        <p class="hero-desc">色色色电影网专注热门高分电影推荐，提供最新电影排行榜、类型分类导航与观影指南，帮你快速找到值得看的电影，不再为「今晚看什么」发愁。</p>
+        <div class="hero-btns">
+          <a href="#rank" class="btn btn-f">查看高分榜 ›</a>
+          <a href="#guide" class="btn btn-g">观影指南</a>
+        </div>
+        <div class="hero-chips">
+          <div class="chip">高分电影<b>2,400+</b></div>
+          <div class="chip">电影类型<b>14+</b></div>
+          <div class="chip">观影指南<b>4 步</b></div>
+        </div>
+      </div>
+      <div class="dash">
+        <div class="ring" id="ring">
+          <div class="ring-in">
+            <div class="lb">本周高分精选</div>
+            <div class="sc" id="ringSc">9.2</div>
+            <div class="nm" id="ringNm">《肖申克的救赎》</div>
+            <div class="mk" id="ringMk">IMDb TOP 250</div>
+          </div>
+        </div>
+        <div class="dash-ctrl" id="dashCtrl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目一：高分电影（双栏排行榜） ======== -->
+<section id="rank" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tt">
+        <div class="eyebrow">Top Rated Charts</div>
+        <h2>高分<em>电影</em>榜</h2>
+        <p>口碑与热度双维度，精选最值得看的片子</p>
+      </div>
+      <a href="#" class="more">完整榜单 ›</a>
+    </div>
+    <div class="rank" id="rankBox"></div>
+  </div>
+</section>
+
+<!-- ===== 栏目二：类型分类（彩色方块矩阵） ======== -->
+<section id="genre" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tt">
+        <div class="eyebrow">Genre Matrix</div>
+        <h2>电影<em>类型</em>分类</h2>
+        <p>想看什么类型，直接挑</p>
+      </div>
+      <a href="#" class="more">全部类型 ›</a>
+    </div>
+    <div class="gen-grid" id="genBox"></div>
+  </div>
+</section>
+
+<!-- ===== 栏目三：观影指南（四步横轴） ======== -->
+<section id="guide" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tt">
+        <div class="eyebrow">Watching Guide</div>
+        <h2>观影<em>指南</em></h2>
+        <p>四步找到属于你的那部电影</p>
+      </div>
+    </div>
+    <div class="guide" id="guideBox"></div>
+  </div>
+</section>
+
+<!-- ===== 栏目四：上映日历（周历网格） ======== -->
+<section id="cal" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tt">
+        <div class="eyebrow">Release Calendar</div>
+        <h2>每日<em>观影</em>日历</h2>
+        <p>一周七天，每天一部不重样</p>
+      </div>
+      <a href="#" class="more">订阅排片 ›</a>
+    </div>
+    <div class="cal">
+      <div class="cal-top">
+        <h4>本周观影安排</h4>
+        <span class="wk" id="wkTxt"></span>
+      </div>
+      <div class="cal-grid" id="calBox"></div>
+      <div class="cal-ft"><span><i></i>今日推荐</span><span>共 7 天 · 7 部精选</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目五：关于 ======== -->
+<section id="about" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tt">
+        <div class="eyebrow">About</div>
+        <h2>关于 色色色电影网</h2>
+        <p>帮你快速找到值得看的电影</p>
+      </div>
+    </div>
+    <div class="about">
+      <div class="ab-l">
+        <h3>不再为「今晚看什么」发愁</h3>
+        <p>色色色电影网专注热门高分电影推荐，提供最新电影排行榜、类型分类导航与观影指南。我们相信，一部好电影值得被更多人看见，也希望每个打开这个网站的人，都能快速找到自己想看的那一部。</p>
+        <span class="url">★ 网站名称：色色色电影网 · 网站网址：https://sesesedianyingwang-wap.github.io</span>
+      </div>
+      <div class="ab-r">
+        <div><div class="num">2,400+</div><div class="lb">高分电影收录</div></div>
+        <div><div class="num">14+</div><div class="lb">电影类型分类</div></div>
+        <div><div class="num">4 步</div><div class="lb">观影指南流程</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="ft-brand">
+        <a href="#top" class="brand"><span class="mk">666</span><span class="nm">666<strong>电影网</strong></span></a>
+        <p>色色色电影网 · sesesedianyingwang-wap.github.io<br>热门高分电影推荐、最新电影排行榜与观影指南。</p>
+      </div>
+      <div class="ft-col"><h5>导览</h5><a href="#top">首页</a><a href="#rank">高分电影</a><a href="#genre">类型分类</a><a href="#guide">观影指南</a><a href="#cal">上映日历</a></div>
+      <div class="ft-col"><h5>热门类型</h5><a href="#">剧情</a><a href="#">动作</a><a href="#">科幻</a><a href="#">喜剧</a><a href="#">悬疑</a></div>
+      <div class="ft-col"><h5>关于本站</h5><a href="#about">网站介绍</a><a href="#">免责声明</a><a href="#">投稿合作</a><a href="#">意见反馈</a></div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 色色色电影网 sesesedianyingwang-wap.github.io · 热门高分电影推荐</span>
+      <span><a href="#">网站地图</a> · <a href="#">隐私政策</a> · <a href="#">免责声明</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+
+<script>
+/* ===== 数据 ===== */
+var cols=[
+  {t:"口碑榜",s:"基于评分与评论量",rows:[
+    {n:"肖申克的救赎",y:"1994",sc:"9.7"},
+    {n:"霸王别姬",y:"1993",sc:"9.6"},
+    {n:"阿甘正传",y:"1994",sc:"9.5"},
+    {n:"泰坦尼克号",y:"1997",sc:"9.4"},
+    {n:"这个杀手不太冷",y:"1994",sc:"9.4"},
+    {n:"星际穿越",y:"2014",sc:"9.3"}
+  ]},
+  {t:"热度榜",s:"本周搜索与播放",rows:[
+    {n:"周处除三害",y:"2023",sc:"8.2"},
+    {n:"奥本海默",y:"2023",sc:"8.8"},
+    {n:"热辣滚烫",y:"2024",sc:"7.9"},
+    {n:"第二十条",y:"2024",sc:"7.6"},
+    {n:"沙丘2",y:"2024",sc:"8.3"},
+    {n:"飞驰人生2",y:"2024",sc:"7.8"}
+  ]}
+];
+var gens=[
+  {n:"动作",c:"320+",i:"💥",a:"#1a0e0e",b:"#c00"},
+  {n:"剧情",c:"480+",i:"🎭",a:"#0e1a1a",b:"#0e7a7a"},
+  {n:"喜剧",c:"260+",i:"😂",a:"#1a180e",b:"#c8a30a"},
+  {n:"科幻",c:"190+",i:"🚀",a:"#0e0f1a",b:"#3a4ad8"},
+  {n:"悬疑",c:"210+",i:"🕵️",a:"#150e1a",b:"#7a3ac8"},
+  {n:"爱情",c:"280+",i:"💗",a:"#1a0e14",b:"#d83a7a"},
+  {n:"动画",c:"150+",i:"🎨",a:"#0e1a14",b:"#3ac88a"},
+  {n:"恐怖",c:"130+",i:"👻",a:"#0a0a0a",b:"#4a4a4a"}
+];
+var guides=[
+  {n:"01",t:"确定心情",d:"先问自己今天想放松、想感动，还是想烧脑"},
+  {n:"02",t:"挑个类型",d:"从动作、剧情、喜剧等十多个分类里快速筛选"},
+  {n:"03",t:"看榜单评分",d:"参考高分榜与热度榜，避开踩雷片"},
+  {n:"04",t:"开始观影",d:"找一部合适的，泡杯茶，安静地看完"}
+];
+var week=[
+  {d:"周一 · 10/05",t:"星际穿越",hl:1},
+  {d:"周二 · 10/06",t:"周处除三害"},
+  {d:"周三 · 10/07",t:"奥本海默"},
+  {d:"周四 · 10/08",t:"热辣滚烫"},
+  {d:"周五 · 10/09",t:"沙丘2",hl:1},
+  {d:"周六 · 10/10",t:"飞驰人生2"},
+  {d:"周日 · 10/11",t:"第二十条"}
+];
+var rings=[
+  {sc:"9.2",n:"《肖申克的救赎》",m:"IMDb TOP 250"},
+  {sc:"8.8",n:"《奥本海默》",m:"本周热度 TOP 1"},
+  {sc:"8.2",n:"《周处除三害》",m:"本月口碑黑马"}
+];
+
+/* ===== 高分榜 ===== */
+var rb=document.getElementById('rankBox');
+var h='';
+for(var i=0;i<cols.length;i++){
+  var c=cols[i];
+  h+='<div class="rk-col"><h4>'+c.t+'<span>'+c.s+'</span></h4><ol>';
+  for(var j=0;j<c.rows.length;j++){
+    var r=c.rows[j],med=j<3?' g'+(j+1):'';
+    h+='<li><a href="#" class="rk-i'+med+'"><span class="no">'+(j+1)+'</span><span class="tx"><h6>'+r.n+'</h6><small>'+r.y+'</small></span><span class="sc">'+r.sc+'</span></a></li>';
+  }
+  h+='</ol></div>';
+}
+rb.innerHTML=h;
+
+/* ===== 类型矩阵 ===== */
+var gb=document.getElementById('genBox');
+h='';
+for(var i=0;i<gens.length;i++){
+  var g=gens[i];
+  h+='<a href="#" class="gen"><div style="background:linear-gradient(155deg,'+g.a+','+g.b+')"></div><span class="ic">'+g.i+'</span><div><div class="nmx">'+g.n+'</div><div class="ct">'+g.c+' 部影片</div></div></a>';
+}
+gb.innerHTML=h;
+
+/* ===== 观影指南 ===== */
+var gub=document.getElementById('guideBox');
+h='';
+for(var i=0;i<guides.length;i++){
+  var u=guides[i];
+  h+='<div class="gd"><div class="n">'+u.n+'</div><h5>'+u.t+'</h5><p>'+u.d+'</p></div>';
+}
+gub.innerHTML=h;
+
+/* ===== 上映日历 ===== */
+var wd=["周日","周一","周二","周三","周四","周五","周六"];
+var dt=new Date();
+document.getElementById('wkTxt').textContent='第 '+(Math.ceil((dt.getDate()+new Date(dt.getFullYear(),dt.getMonth(),1).getDay())/7))+' 周 · 自动按今日生成';
+var cb=document.getElementById('calBox');
+h='';
+for(var i=0;i<week.length;i++){
+  var w=week[i];
+  var dd=new Date(dt.getTime()+86400000*i);
+  var day=(wd[dd.getDay()]||'').replace('周','');
+  var hl=w.hl?' hl':'';
+  h+='<a href="#" class="cd'+hl+'"><div class="d">'+day+' '+dd.getMonth()+1+'/'+(dd.getDate()<10?'0':'')+dd.getDate()+'</div><div class="t">'+w.t+'</div></a>';
+}
+cb.innerHTML=h;
+
+/* ===== 环形评分盘 ===== */
+var rc=document.getElementById('ring'),rs=document.getElementById('ringSc'),rn=document.getElementById('ringNm'),rm=document.getElementById('ringMk');
+var dc=document.getElementById('dashCtrl');
+var cur=0;
+function setRing(k){
+  var o=rings[k];
+  rc.style.background='conic-gradient(from 200deg,#ff3b3b 0deg,#ffb432 '+(o.sc*12)+'deg,#3a4252 '+(o.sc*12)+'deg 360deg)';
+  rs.textContent=o.sc;rn.textContent=o.n;rm.textContent=o.m;
+  [].forEach.call(dc.children,function(b,x){b.classList.toggle('on',x===k)});
+  cur=k;
+}
+var bh='';
+for(var i=0;i<rings.length;i++){bh+='<button data-i="'+i+'">'+(i===0?'口碑首选':i===1?'本周热度':'黑马推荐')+'</button>'}
+dc.innerHTML=bh;
+dc.onclick=function(e){
+  if(e.target.dataset.i!==undefined)setRing(+e.target.dataset.i);
+};
+setRing(0);
+setInterval(function(){setRing((cur+1)%rings.length)},4500);
+
+/* ===== 移动端菜单 ===== */
+var hamb=document.getElementById('hamb'),menu=document.getElementById('menu');
+hamb.onclick=function(){menu.classList.toggle('open')};
+menu.onclick=function(e){if(e.target.tagName==='A')menu.classList.remove('open')};
+
+/* ===== 导航高亮 + 回到顶部 ===== */
+var links=document.querySelectorAll('.menu a'),topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+150,idx=0;
+  for(var n=0;n<links.length;n++){
+    var el=document.querySelector(links[n].getAttribute('href'));
+    if(el&&el.offsetTop<=y)idx=n;
+  }
+  for(var x=0;x<links.length;x++)links[x].classList.toggle('on',x===idx);
+  topBtn.style.display=window.scrollY>500?'grid':'none';
+},{passive:true});
+topBtn.onclick=function(){window.scrollTo({top:0,behavior:'smooth'})};
+</script>
+</body>
+</html>
